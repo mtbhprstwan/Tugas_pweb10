@@ -83,7 +83,7 @@
     <div class="container">
         <h3>Formulir Pendaftaran Siswa Baru</h3>
 
-        <form action="proses-pendaftaran.php" method="POST">
+        <form action="proses-pendaftaran.php" method="POST" enctype="multipart/form-data">
             <div>
                 <label for="nama">Nama:</label>
                 <input type="text" name="nama" placeholder="Nama lengkap" />
@@ -110,8 +110,12 @@
                 </select>
             </div>
             <div>
-                <label for="sekolah_asal">Sekolah Asal:</label>
-                <input type="text" name="sekolah_asal" placeholder="Nama sekolah" />
+                <label for="asal_sekolah">Sekolah Asal:</label>
+                <input type="text" name="asal_sekolah" placeholder="Nama sekolah" />
+            </div>
+            <div class="mb-4">
+                <label for="foto">Upload Foto:</label>
+                <input type="file" name="foto" accept="images/*" />
             </div>
             <button type="submit" name="daftar" class="btn">Daftar</button>
         </form>

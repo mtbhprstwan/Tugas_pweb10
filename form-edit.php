@@ -111,6 +111,7 @@ if (mysqli_num_rows($query) < 1) {
                 <label for="alamat">Alamat:</label>
                 <textarea name="alamat"><?php echo $siswa['alamat'] ?></textarea>
             </div>
+            
             <div>
                 <label for="jenis_kelamin">Jenis Kelamin:</label>
                 <div>
@@ -131,9 +132,15 @@ if (mysqli_num_rows($query) < 1) {
                 </select>
             </div>
             <div>
-                <label for="sekolah_asal">Sekolah Asal:</label>
-                <input type="text" name="sekolah_asal" placeholder="Nama sekolah"
-                    value="<?php echo $siswa['sekolah_asal'] ?>" />
+                <label for="asal_sekolah">Sekolah Asal:</label>
+                <input type="text" name="asal_sekolah" placeholder="Nama sekolah"
+                    value="<?php echo $siswa['asal_sekolah'] ?>" />
+            </div>
+            <div>
+                <?php echo "<td><img src='gambar/".$siswa['foto']."' width='100' height='100'></td>"; ?>
+                <br>
+                <label for="foto">Foto: </label>
+                <input type="file" name="foto">
             </div>
             <button type="submit" name="simpan" class="btn">Simpan</button>
         </form>
